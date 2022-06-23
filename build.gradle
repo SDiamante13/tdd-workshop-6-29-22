@@ -1,0 +1,35 @@
+buildscript {
+
+    ext {
+        jUnitVersion='5.6.0'
+        mockitoVersion='3.3.3'
+        assertJVersion='3.15.0'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+group 'tech.pathtoprogramming'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$jUnitVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter-engine:$jUnitVersion"
+    testImplementation "org.mockito:mockito-junit-jupiter:$mockitoVersion"
+    testImplementation "org.assertj:assertj-core:$assertJVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter-params:$jUnitVersion"
+}
+
+test {
+    useJUnitPlatform()
+}
