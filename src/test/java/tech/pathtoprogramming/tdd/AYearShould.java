@@ -1,6 +1,5 @@
 package tech.pathtoprogramming.tdd;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -18,20 +17,6 @@ class AYearShould {
         boolean isLeapYear = Year.isLeapYear(givenYear);
 
         assertThat(isLeapYear).isEqualTo(isExpectedLeapYear);
-    }
-
-    @Test
-    void determineThatTheYearIsAStandardLeapYear() {
-        boolean isLeapYear = Year.isLeapYear(1996);
-
-        assertThat(isLeapYear).isTrue();
-    }
-
-    @Test
-    void anotherLeapYear() {
-        boolean isLeapYear = Year.isLeapYear(1992);
-
-        assertThat(isLeapYear).isTrue();
     }
 }
 
