@@ -30,7 +30,7 @@ class Year {
         this.year = year;
     }
 
-    private static boolean isDivisibleBy(int year, int four) {
+    private boolean isDivisibleBy(int year, int four) {
         return year % four == 0;
     }
 
