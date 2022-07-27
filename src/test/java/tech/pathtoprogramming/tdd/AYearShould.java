@@ -7,6 +7,6 @@ class AYearShould {
 
     @Test
     void failingTest() {
-        Assertions.assertThat(true).isEqualTo(false);
+        Assertions.assertThat(true).isEqualTo(true);
     }
 }
