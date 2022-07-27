@@ -11,7 +11,8 @@ class AYearShould {
     @CsvSource({
             "2001,false",
             "1996,true",
-            "1992,true"
+            "1992,true",
+            "1900,false"
     })
     void determineThatTheYearIsNotALeapYearForCommonCase(int givenYear, boolean isExpectedLeapYear) {
         boolean isLeapYear = Year.isLeapYear(givenYear);
