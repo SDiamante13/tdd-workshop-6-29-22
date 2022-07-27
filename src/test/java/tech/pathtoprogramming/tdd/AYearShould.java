@@ -9,11 +9,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 class AYearShould {
 
     @ParameterizedTest
-    @CsvSource({"2001,false"})
+    @CsvSource({
+            "2001,false",
+            "1996,true",
+            "1992,true"
+    })
     void determineThatTheYearIsNotALeapYearForCommonCase(int givenYear, boolean isExpectedLeapYear) {
-        boolean isLeapYear = Year.isLeapYear(2001);
+        boolean isLeapYear = Year.isLeapYear(givenYear);
 
-        assertThat(isLeapYear).isEqualTo(false);
+        assertThat(isLeapYear).isEqualTo(isExpectedLeapYear);
     }
 
     @Test
