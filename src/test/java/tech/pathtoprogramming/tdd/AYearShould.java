@@ -30,10 +30,6 @@ class Year {
         this.year = year;
     }
 
-    private boolean isDivisibleBy(int four) {
-        return this.year % four == 0;
-    }
-
     public boolean isLeapYear(int year) {
         if (isDivisibleBy(4) && (isNotDivisibleBy(year, 100) || isDivisibleBy(400))) {
             return true;
@@ -41,7 +37,11 @@ class Year {
         return false;
     }
 
-    private boolean isNotDivisibleBy(int year, int hundred) {
-        return year % hundred != 0;
+    private boolean isDivisibleBy(int number) {
+        return this.year % number == 0;
+    }
+
+    private boolean isNotDivisibleBy(int year, int number) {
+        return year % number != 0;
     }
 }
