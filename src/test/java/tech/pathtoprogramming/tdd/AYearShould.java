@@ -1,12 +1,13 @@
 package tech.pathtoprogramming.tdd;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class AYearShould {
 
     @Test
     void failingTest() {
-        Assertions.assertThat(true).isEqualTo(true);
+        assertThat(true).isEqualTo(true);
     }
 }
