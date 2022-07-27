@@ -16,7 +16,7 @@ class AYearShould {
             "2000,true"
     })
     void determineWhetherAGivenYearIsALeapYearOrNot(int givenYear, boolean isExpectedLeapYear) {
-        boolean isLeapYear = Year.isLeapYear(givenYear);
+        boolean isLeapYear = new Year().isLeapYear(givenYear);
 
         assertThat(isLeapYear).isEqualTo(isExpectedLeapYear);
     }
@@ -24,14 +24,14 @@ class AYearShould {
 
 class Year {
 
-    public static boolean isLeapYear(int year) {
+    private static boolean isDivisibleBy(int year, int four) {
+        return year % four == 0;
+    }
+
+    public boolean isLeapYear(int year) {
         if (isDivisibleBy(year, 4) && (year % 100 != 0 || isDivisibleBy(year, 400))) {
             return true;
         }
         return false;
-    }
-
-    private static boolean isDivisibleBy(int year, int four) {
-        return year % four == 0;
     }
 }
