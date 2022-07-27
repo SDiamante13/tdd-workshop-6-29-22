@@ -8,6 +8,15 @@ class AYearShould {
 
     @Test
     void determineThatTheYearIsNotALeapYearForCommonCase() {
-        assertThat(true).isEqualTo(true);
+        boolean isLeapYear = Year.isLeapYear(2001);
+
+        assertThat(isLeapYear).isEqualTo(false);
+    }
+}
+
+class Year {
+
+    public static boolean isLeapYear(int year) {
+        return true;
     }
 }
