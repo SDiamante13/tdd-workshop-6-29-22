@@ -24,12 +24,18 @@ class AYearShould {
 
 class Year {
 
+    private int year;
+
+    public Year() {
+    }
+
     private static boolean isDivisibleBy(int year, int four) {
         return year % four == 0;
     }
 
     public boolean isLeapYear(int year) {
-        if (isDivisibleBy(year, 4) && (year % 100 != 0 || isDivisibleBy(year, 400))) {
+        this.year = year;
+        if (isDivisibleBy(this.year, 4) && (year % 100 != 0 || isDivisibleBy(year, 400))) {
             return true;
         }
         return false;
