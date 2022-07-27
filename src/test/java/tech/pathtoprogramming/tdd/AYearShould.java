@@ -14,7 +14,7 @@ class AYearShould {
             "1992,true",
             "1900,false"
     })
-    void determineThatTheYearIsNotALeapYearForCommonCase(int givenYear, boolean isExpectedLeapYear) {
+    void determineWhetherAGivenYearIsALeapYearOrNot(int givenYear, boolean isExpectedLeapYear) {
         boolean isLeapYear = Year.isLeapYear(givenYear);
 
         assertThat(isLeapYear).isEqualTo(isExpectedLeapYear);
