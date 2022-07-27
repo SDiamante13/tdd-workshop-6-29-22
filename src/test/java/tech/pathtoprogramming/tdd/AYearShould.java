@@ -26,9 +26,6 @@ class Year {
 
     private int year;
 
-    public Year() {
-    }
-
     public Year(int year) {
         this.year = year;
     }
