@@ -12,7 +12,8 @@ class AYearShould {
             "2001,false",
             "1996,true",
             "1992,true",
-            "1900,false"
+            "1900,false",
+            "2000,true"
     })
     void determineWhetherAGivenYearIsALeapYearOrNot(int givenYear, boolean isExpectedLeapYear) {
         boolean isLeapYear = Year.isLeapYear(givenYear);
