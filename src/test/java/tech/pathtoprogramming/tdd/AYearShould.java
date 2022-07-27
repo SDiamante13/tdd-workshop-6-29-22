@@ -1,16 +1,19 @@
 package tech.pathtoprogramming.tdd;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 class AYearShould {
 
-    @Test
-    void determineThatTheYearIsNotALeapYearForCommonCase() {
+    @ParameterizedTest
+    @CsvSource({"2001,false"})
+    void determineThatTheYearIsNotALeapYearForCommonCase(int givenYear, boolean isExpectedLeapYear) {
         boolean isLeapYear = Year.isLeapYear(2001);
 
-        assertThat(isLeapYear).isFalse();
+        assertThat(isLeapYear).isEqualTo(false);
     }
 
     @Test
