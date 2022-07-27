@@ -31,7 +31,7 @@ class AYearShould {
 class Year {
 
     public static boolean isLeapYear(int year) {
-        if (year == 1996 || year == 1992) {
+        if (year % 4 == 0) {
             return true;
         }
         return false;
