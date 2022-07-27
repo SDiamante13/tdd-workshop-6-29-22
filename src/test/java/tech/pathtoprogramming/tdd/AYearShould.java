@@ -31,7 +31,7 @@ class Year {
     }
 
     private boolean isDivisibleBy(int year, int four) {
-        return year % four == 0;
+        return this.year % four == 0;
     }
 
     public boolean isLeapYear(int year) {
