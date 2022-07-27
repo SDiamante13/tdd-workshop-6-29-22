@@ -10,7 +10,7 @@ class AYearShould {
     void determineThatTheYearIsNotALeapYearForCommonCase() {
         boolean isLeapYear = Year.isLeapYear(2001);
 
-        assertThat(isLeapYear).isEqualTo(false);
+        assertThat(isLeapYear).isFalse();
     }
 }
 
