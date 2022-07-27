@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class AYearShould {
 
     @Test
-    void failingTest() {
+    void determineThatTheYearIsNotALeapYearForCommonCase() {
         assertThat(true).isEqualTo(true);
     }
 }
