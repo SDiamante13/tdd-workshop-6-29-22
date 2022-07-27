@@ -12,6 +12,13 @@ class AYearShould {
 
         assertThat(isLeapYear).isFalse();
     }
+
+    @Test
+    void determineThatTheYearIsAStandardLeapYear() {
+        boolean isLeapYear = Year.isLeapYear(1996);
+
+        assertThat(isLeapYear).isTrue();
+    }
 }
 
 class Year {
